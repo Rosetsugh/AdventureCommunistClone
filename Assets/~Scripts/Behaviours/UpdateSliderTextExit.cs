@@ -35,8 +35,15 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public delegate void LockBuyFarmersButton();
     public static event LockBuyFarmersButton lockBuyFarmersButton;
 
+    public delegate void UpdateNumberOfPotatoes();
+    public static event UpdateNumberOfPotatoes updateNumberOfPotatoes;
+
     private void CheckCriteriaToLaunchEvents()
     {
+        // Update the main potato counter
+        if (updateNumberOfPotatoes != null)
+            updateNumberOfPotatoes();
+
         if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
         {
             if (lockBuyFarmersButton != null)
