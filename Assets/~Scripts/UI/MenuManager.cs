@@ -17,11 +17,11 @@ public class MenuManager : MonoBehaviour
     }
 
     public Animator potatoTimer;
-    public int farmerMultiplyer;
+    public int farmerMultiplier;
 
     private void Start()
     {
-        farmerMultiplyer = 1;
+        farmerMultiplier = 1;
     }
 
     public void UI_Button_DigPotatoes()
@@ -32,13 +32,19 @@ public class MenuManager : MonoBehaviour
     public delegate void UpdateSliderText();
     public static event UpdateSliderText updateSliderText;
 
+    public delegate void UpdateButtonText(int farmerMultiplyer);
+    public static event UpdateButtonText updateButtonText;
+
     public void UI_Button_BuyFarmer()
     {
-        LevelSessionData.Singleton.numberOfPotatoes -= 10 * farmerMultiplyer;
-        LevelSessionData.Singleton.numberOfComrades -= 1 * farmerMultiplyer;
-        LevelSessionData.Singleton.numberOfFarmers += 1 * farmerMultiplyer;
+        LevelSessionData.Singleton.numberOfPotatoes -= 10 * farmerMultiplier;
+        LevelSessionData.Singleton.numberOfComrades -= 1 * farmerMultiplier;
+        LevelSessionData.Singleton.numberOfFarmers += 1 * farmerMultiplier;
 
         if (updateSliderText != null)
             updateSliderText();
+
+        if (updateButtonText != null)
+            updateButtonText(farmerMultiplier);
     }
 }
