@@ -27,6 +27,7 @@ public class LevelSessionData : MonoBehaviour
     public float potatoFillSpeed = 0.5f;
 
     public int numberOfCommnues;
+    public int communeMultiplier;
 
     public Button BuyFarmerButton;
 
