@@ -28,7 +28,7 @@ public class SliderCountType : MonoBehaviour
             GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
     }
 
-    [StringDropdown("Comrade", "Farmer", "Potato", "Commune")]
+    [StringDropdown("Comrade", "Farmer", "Potato", "Commune", "CommuneFarmer")]
     public string countType;
 
     private void Start()
