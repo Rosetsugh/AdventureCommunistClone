@@ -43,6 +43,7 @@ public class MenuManager : MonoBehaviour
             _runOnce = true;
         }
 
+        // TODO: Change to Farmers
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
             unlockPanelInstance.SetActive(false);
