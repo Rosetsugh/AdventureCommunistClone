@@ -2,7 +2,7 @@
 
 public class LevelSessionData : MonoBehaviour
 {
-    public static LevelSessionData Singleton { get; private set };
+    public static LevelSessionData Singleton { get; private set; }
 
     private void Awake()
     {
