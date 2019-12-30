@@ -40,7 +40,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
     private void CheckCriteriaToLaunchEvents()
     {
-        // Update the main potato counter
+        // Update the text of the main potato counter
         if (updateNumberOfPotatoes != null)
             updateNumberOfPotatoes();
 
