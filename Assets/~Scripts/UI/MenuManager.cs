@@ -19,7 +19,9 @@ public class MenuManager : MonoBehaviour
 
     public Animator potatoTimer;
     public Menu currentMenu;
-
+    public Transform panelParent;
+    public GameObject unlockPanel;
+    public GameObject communePanel;
 
     public void UI_Button_DigPotatoes()
     {
@@ -42,6 +44,15 @@ public class MenuManager : MonoBehaviour
             || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
         {
             button.interactable = false;
+        }
+
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
+            Instantiate(unlockPanel, panelParent);
+
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
+        {
+            Destroy(unlockPanel);
+            Instantiate(communePanel, panelParent);
         }
     }
 
