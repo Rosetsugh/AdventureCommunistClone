@@ -10,7 +10,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyFarmersButton += UnlockBuyFarmersButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
-            MenuManager.updateButtonText += UpdateButtonTextEVH;
+            UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
     }
 
@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
-            MenuManager.updateButtonText -= UpdateButtonTextEVH;
+            UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
         }
     }
 
