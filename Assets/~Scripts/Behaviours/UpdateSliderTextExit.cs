@@ -20,7 +20,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         if (countType == "Potato")
         {
-            LevelSessionData.Singleton.numberOfPotatoes += 2;
+            LevelSessionData.Singleton.numberOfPotatoes += 3;
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
