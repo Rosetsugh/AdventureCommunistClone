@@ -33,6 +33,17 @@ public class MenuManager : MonoBehaviour
 
     public void UI_Button_BuyFarmer(Button button)
     {
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
+        {
+            print("here");
+            Instantiate(unlockPanel, panelParent);
+        }
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
+        {
+            Destroy(unlockPanel);
+            Instantiate(communePanel, panelParent);
+        }
+
         LevelSessionData.Singleton.numberOfPotatoes -= 10 * LevelSessionData.Singleton.farmerMultiplier;
         LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.farmerMultiplier;
         LevelSessionData.Singleton.numberOfFarmers += 1 * LevelSessionData.Singleton.farmerMultiplier;
@@ -44,19 +55,6 @@ public class MenuManager : MonoBehaviour
             || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
         {
             button.interactable = false;
-        }
-
-        print("here");
-
-        if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
-        {
-            print("here");
-            Instantiate(unlockPanel, panelParent);
-        }
-        if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
-        {
-            Destroy(unlockPanel);
-            Instantiate(communePanel, panelParent);
         }
     }
 
