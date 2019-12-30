@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
     public Menu currentMenu;
     public Transform panelParent;
     public GameObject unlockPanel;
+    public GameObject unlockPanelInstance;
     public GameObject communePanel;
 
     public void UI_Button_DigPotatoes()
@@ -38,13 +39,13 @@ public class MenuManager : MonoBehaviour
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && !_runOnce)
         {
             print("here");
-            Instantiate(unlockPanel, panelParent);
+            unlockPanelInstance = Instantiate(unlockPanel, panelParent);
             _runOnce = true;
         }
 
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
-            unlockPanel.SetActive(false);
+            unlockPanelInstance.SetActive(false);
             Instantiate(communePanel, panelParent);
         }
 
