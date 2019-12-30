@@ -22,6 +22,9 @@ public class UpdatePotatoCounter : MonoBehaviour
 
         var multiplier = LevelSessionData.Singleton.numberOfPotatoes / 10;
 
+        if (multiplier < 1)
+            return;
+
         if (LevelSessionData.Singleton.numberOfComrades - multiplier > 0)
         {
             MenuManager.Singleton.farmerMultiplier = multiplier;
