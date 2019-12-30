@@ -12,7 +12,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         var countType = animator.GetComponent<SliderCountType>().countType;
 
-        print(countType);
+        Debug.Log(countType);
         if (countType == "Comrade")
         {
             LevelSessionData.Singleton.numberOfComrades++;
