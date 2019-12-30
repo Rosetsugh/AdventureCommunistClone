@@ -12,6 +12,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         var countType = animator.GetComponent<SliderCountType>().countType;
 
-        animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
+        if(countType == "Comrade")
+            animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
     }
 }
