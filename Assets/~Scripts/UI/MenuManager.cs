@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
     public delegate void UpdateSliderText();
     public static event UpdateSliderText updateSliderText;
 
-    public void UI_Button_BuyFarmer()
+    public void UI_Button_BuyFarmer(Button button)
     {
         LevelSessionData.Singleton.numberOfPotatoes -= 10 * farmerMultiplier;
         LevelSessionData.Singleton.numberOfComrades -= 1 * farmerMultiplier;
@@ -44,7 +44,7 @@ public class MenuManager : MonoBehaviour
             updateSliderText();
 
         if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
-            GetComponent<Button>().interactable = false;
+            button.interactable = false;
     }
 
     public void UI_Button_OpenMenu(Menu nextMenu)
