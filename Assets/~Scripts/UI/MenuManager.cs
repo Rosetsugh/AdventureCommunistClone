@@ -46,6 +46,8 @@ public class MenuManager : MonoBehaviour
             button.interactable = false;
         }
 
+        print("here");
+
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
         {
             print("here");
