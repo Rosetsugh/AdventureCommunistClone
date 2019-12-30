@@ -49,10 +49,12 @@ public class MenuManager : MonoBehaviour
         {
             currentMenu.openMenu = false;
             currentMenu.GetComponent<CanvasGroup>().interactable = false;
+            currentMenu.GetComponent<CanvasGroup>().alpha = 0;
         }
 
         currentMenu = nextMenu;
         currentMenu.openMenu = true;
         currentMenu.GetComponent<CanvasGroup>().interactable = true;
+        currentMenu.GetComponent<CanvasGroup>().alpha = 1;
     }
 }
