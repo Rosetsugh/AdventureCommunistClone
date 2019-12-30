@@ -8,11 +8,15 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        LevelSessionData.Singleton.numberOfComrades++;
+
 
         var countType = animator.GetComponent<SliderCountType>().countType;
 
-        if(countType == "Comrade")
+        print(countType);
+        if (countType == "Comrade")
+        {
+            LevelSessionData.Singleton.numberOfComrades++;
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
+        }
     }
 }
