@@ -46,9 +46,13 @@ public class MenuManager : MonoBehaviour
     public void UI_Button_OpenMenu(Menu nextMenu)
     {
         if (currentMenu != null)
+        {
             currentMenu.openMenu = false;
+            currentMenu.GetComponent<CanvasGroup>().interactable = false;
+        }
 
         currentMenu = nextMenu;
         currentMenu.openMenu = true;
+        currentMenu.GetComponent<CanvasGroup>().interactable = true;
     }
 }
