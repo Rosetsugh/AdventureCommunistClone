@@ -5,14 +5,20 @@ public class ButtonManager : MonoBehaviour
 {
     private void OnEnable()
     {
-        UpdateSliderTextExit.unlockBuyFarmersButton += UnlockBuyFarmersButtonEVH;
-        UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
+        if (tag == "BuyFarmers")
+        {
+            UpdateSliderTextExit.unlockBuyFarmersButton += UnlockBuyFarmersButtonEVH;
+            UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
+        }
     }
 
     private void OnDisable()
     {
-        UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
-        UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
+        if (tag == "BuyFarmers")
+        {
+            UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
+            UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
+        }
     }
 
     private void UnlockBuyFarmersButtonEVH()
