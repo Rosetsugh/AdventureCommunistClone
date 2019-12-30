@@ -13,5 +13,6 @@ public class MenuManager : MonoBehaviour
     {
         LevelSessionData.Singleton.numberOfPotatoes -= 10;
         LevelSessionData.Singleton.numberOfComrades -= 1;
+        LevelSessionData.Singleton.numberOfFarmers += 1;
     }
 }
