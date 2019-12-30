@@ -66,16 +66,17 @@ public class MenuManager : MonoBehaviour
 
     public void UI_Button_BuyCommune(Button button)
     {
-        LevelSessionData.Singleton.numberOfPotatoes -= 100 * LevelSessionData.Singleton.farmerMultiplier;
-        LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.farmerMultiplier;
-        LevelSessionData.Singleton.numberOfFarmers -= 10 * LevelSessionData.Singleton.farmerMultiplier;
-        LevelSessionData.Singleton.numberOfCommnues += 1 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfPotatoes -= 100 * LevelSessionData.Singleton.communeMultiplier;
+        LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.communeMultiplier;
+        LevelSessionData.Singleton.numberOfFarmers -= 10 * LevelSessionData.Singleton.communeMultiplier;
+        LevelSessionData.Singleton.numberOfCommnues += 1 * LevelSessionData.Singleton.communeMultiplier;
 
         if (updateSliderText != null)
             updateSliderText();
 
-        if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
-            || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
+        if (LevelSessionData.Singleton.numberOfPotatoes < 100 * LevelSessionData.Singleton.communeMultiplier
+            || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.communeMultiplier
+            || LevelSessionData.Singleton.numberOfFarmers < 10 * LevelSessionData.Singleton.communeMultiplier)
         {
             button.interactable = false;
         }
