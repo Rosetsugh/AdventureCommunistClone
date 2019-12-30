@@ -25,13 +25,13 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
 
-        CheckForEvents();
+        CheckCriteriaToLaunchEvents();
     }
 
     public delegate void UnlockBuyFarmersButton();
     public static event UnlockBuyFarmersButton unlockBuyFarmersButton;
 
-    private void CheckForEvents()
+    private void CheckCriteriaToLaunchEvents()
     {
         if(LevelSessionData.Singleton.numberOfPotatoes >= 10 && LevelSessionData.Singleton.numberOfComrades > 1)
         {
