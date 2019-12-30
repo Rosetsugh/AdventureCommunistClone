@@ -36,6 +36,10 @@ public class ButtonManager : MonoBehaviour
 
     private void UpdateButtonTextEVH(int farmerMultiplier)
     {
-        GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
+        if(farmerMultiplier == 0)
+            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x1 Farmer";
+
+        else
+            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
     }
 }
