@@ -1,18 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator potatoTimer;
 
-    // Update is called once per frame
-    void Update()
+    public void UI_Button_DigPotatoes()
     {
-        
+        potatoTimer.SetTrigger("MoveSlider");
     }
 }
