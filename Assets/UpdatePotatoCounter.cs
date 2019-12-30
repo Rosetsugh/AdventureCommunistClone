@@ -10,7 +10,7 @@ public class UpdatePotatoCounter : MonoBehaviour
 
     private void OnDisable()
     {
-        UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
+        UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
     }
 
     private void UpdatePotatoCounterEVH()
