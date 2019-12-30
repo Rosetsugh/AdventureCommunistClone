@@ -13,13 +13,21 @@ public class UpdatePotatoCounter : MonoBehaviour
         UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
     }
 
+    public delegate void UpdateButtonText(int farmerMultiplyer);
+    public static event UpdateButtonText updateButtonText;
+
     private void UpdatePotatoCounterEVH()
     {
         GetComponent<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
 
         var multiplier = LevelSessionData.Singleton.numberOfPotatoes / 10;
 
-        if(LevelSessionData.Singleton.numberOfComrades - multiplier > 0)
+        if (LevelSessionData.Singleton.numberOfComrades - multiplier > 0)
+        {
             MenuManager.Singleton.farmerMultiplier = multiplier;
+
+            if (updateButtonText != null)
+                updateButtonText(multiplier);
+        }
     }
 }
