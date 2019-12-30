@@ -15,5 +15,11 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             LevelSessionData.Singleton.numberOfComrades++;
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
         }
+
+        if (countType == "Potato")
+        {
+            LevelSessionData.Singleton.numberOfPotatoes =+ 2;
+            animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
+        }
     }
 }
