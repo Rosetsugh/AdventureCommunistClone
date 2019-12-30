@@ -31,9 +31,18 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public delegate void UnlockBuyFarmersButton();
     public static event UnlockBuyFarmersButton unlockBuyFarmersButton;
 
+    public delegate void LockBuyFarmersButton();
+    public static event LockBuyFarmersButton lockBuyFarmersButton;
+
     private void CheckCriteriaToLaunchEvents()
     {
-        if(LevelSessionData.Singleton.numberOfPotatoes >= 10 && LevelSessionData.Singleton.numberOfComrades > 1)
+        if (LevelSessionData.Singleton.numberOfPotatoes < 10 && LevelSessionData.Singleton.numberOfComrades < 1)
+        {
+            if (lockBuyFarmersButton != null)
+                lockBuyFarmersButton();
+        }
+
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && LevelSessionData.Singleton.numberOfComrades >= 1)
         {
             if (unlockBuyFarmersButton != null)
                 unlockBuyFarmersButton();
