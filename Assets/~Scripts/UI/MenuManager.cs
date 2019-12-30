@@ -44,7 +44,9 @@ public class MenuManager : MonoBehaviour
             updateSliderText();
 
         if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
+        {
             button.interactable = false;
+        }
     }
 
     public void UI_Button_OpenMenu(Menu nextMenu)
