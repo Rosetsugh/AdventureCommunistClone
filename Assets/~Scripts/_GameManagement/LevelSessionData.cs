@@ -39,6 +39,6 @@ public class LevelSessionData : MonoBehaviour
     public void UpdateButtonText()
     {
         if(numberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
-            BuyFarmerButton.GetComponent<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
+            BuyFarmerButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
     }
 }
