@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator _animator;
+
+    public bool openMenu
     {
-        
+        get { return _animator.GetBool("openMenu"); }
+        set { _animator.SetBool("openMenu", value); }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _animator = GetComponent<Animator>();
     }
 }
