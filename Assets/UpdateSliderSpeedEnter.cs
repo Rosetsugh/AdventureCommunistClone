@@ -9,7 +9,6 @@ public class UpdateSliderSpeedEnter : StateMachineBehaviour
         if (countType == "Comrade")
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.comradeFillSpeed);
 
-
         if (countType == "Potato")
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
     }
