@@ -35,11 +35,13 @@ public class MenuManager : MonoBehaviour
 
     public void UI_Button_BuyFarmer(Button button)
     {
-        if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && !_runOnce)
         {
             print("here");
             Instantiate(unlockPanel, panelParent);
+            _runOnce = true;
         }
+
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
             Destroy(unlockPanel);
