@@ -24,5 +24,19 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
+
+        CheckForEvents();
+    }
+
+    public delegate void UnlockBuyFarmersButton();
+    public static event UnlockBuyFarmersButton unlockBuyFarmersButton;
+
+    private void CheckForEvents()
+    {
+        if(LevelSessionData.Singleton.numberOfPotatoes >= 10 && LevelSessionData.Singleton.numberOfComrades > 1)
+        {
+            if (unlockBuyFarmersButton != null)
+                unlockBuyFarmersButton();
+        }
     }
 }
