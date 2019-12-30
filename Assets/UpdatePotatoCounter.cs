@@ -36,10 +36,10 @@ public class UpdatePotatoCounter : MonoBehaviour
         // Reset multiplier
         else
         {
-            LevelSessionData.Singleton.farmerMultiplier = 1;
+            LevelSessionData.Singleton.farmerMultiplier = LevelSessionData.Singleton.numberOfComrades;
 
             if (updateButtonText != null)
-                updateButtonText(1);
+                updateButtonText(LevelSessionData.Singleton.numberOfComrades);
         }
     }
 }
