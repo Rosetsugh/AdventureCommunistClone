@@ -29,4 +29,9 @@ public class LevelSessionData : MonoBehaviour
         numberOfFarmers = 1;
         numberOfPotatoes = 0;
     }
+
+    public void UpdateScores()
+    {
+
+    }
 }
