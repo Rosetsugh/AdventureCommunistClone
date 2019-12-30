@@ -34,10 +34,14 @@ public class LevelSessionData : MonoBehaviour
     private void Start()
     {
         numberOfComrades = 0;
+
         numberOfFarmers = 1;
         farmerMultiplier = 1;
+
         numberOfPotatoes = 0;
+
         numberOfCommnues = 0;
+        communeMultiplier = 1;
     }
 
     public void UpdateButtonText()
