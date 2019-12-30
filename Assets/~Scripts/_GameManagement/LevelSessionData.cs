@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSessionData : MonoBehaviour
 {
@@ -24,6 +26,8 @@ public class LevelSessionData : MonoBehaviour
     public int numberOfPotatoes;
     public float potatoFillSpeed = 0.5f;
 
+    public Button BuyFarmerButton;
+
     private void Start()
     {
         numberOfComrades = 0;
@@ -34,6 +38,7 @@ public class LevelSessionData : MonoBehaviour
 
     public void UpdateButtonText()
     {
-        if(numberOfPotatoes > 10 * MenuManager.Singleton.farmerMultiplier && numberOfComrades > 1 * )
+        if(numberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
+            BuyFarmerButton.GetComponent<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
     }
 }
