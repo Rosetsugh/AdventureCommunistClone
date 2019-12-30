@@ -8,4 +8,10 @@ public class MenuManager : MonoBehaviour
     {
         potatoTimer.SetTrigger("MoveSlider");
     }
+
+    public void UI_Button_BuyFarmer()
+    {
+        LevelSessionData.Singleton.numberOfPotatoes -= 10;
+        LevelSessionData.Singleton.numberOfComrades -= 1;
+    }
 }
