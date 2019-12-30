@@ -20,9 +20,11 @@ public class LevelSessionData : MonoBehaviour
 
     public int numberOfComrades;
     public float comradeFillSpeed = 1;
+
     public int numberOfFarmers = 1;
     public float farmerFillSpeed = 0.5f;
     public int farmerMultiplier = 1;
+
     public int numberOfPotatoes;
     public float potatoFillSpeed = 0.5f;
 
