@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour
 
     public Animator potatoTimer;
     public int farmerMultiplier;
+    public Menu currentMenu;
 
     private void Start()
     {
@@ -32,8 +33,6 @@ public class MenuManager : MonoBehaviour
     public delegate void UpdateSliderText();
     public static event UpdateSliderText updateSliderText;
 
-
-
     public void UI_Button_BuyFarmer()
     {
         LevelSessionData.Singleton.numberOfPotatoes -= 10 * farmerMultiplier;
@@ -42,7 +41,14 @@ public class MenuManager : MonoBehaviour
 
         if (updateSliderText != null)
             updateSliderText();
+    }
 
+    public void UI_Button_OpenMenu(Menu nextMenu)
+    {
+        if (currentMenu != null)
+            currentMenu.openMenu = false;
 
+        currentMenu = nextMenu;
+        currentMenu.openMenu = true;
     }
 }
