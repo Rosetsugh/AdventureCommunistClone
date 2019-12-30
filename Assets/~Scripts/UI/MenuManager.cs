@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
         if (updateSliderText != null)
             updateSliderText();
 
-        if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
+        if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1 * farmerMultiplier)
         {
             button.interactable = false;
         }
