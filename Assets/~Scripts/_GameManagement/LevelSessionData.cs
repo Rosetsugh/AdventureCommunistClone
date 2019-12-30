@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelSessionData : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static LevelSessionData Singleton { get; private set };
+
+    private void Awake()
     {
-        
+        if (Singleton == null)
+            Singleton = this;
+
+        else
+        {
+            Debug.LogError("Another Singleton Exits! " + GetType() + ".cs has been removed from the " + name + " Game Object");
+            Destroy(this);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
