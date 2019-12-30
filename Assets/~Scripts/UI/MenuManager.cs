@@ -32,8 +32,7 @@ public class MenuManager : MonoBehaviour
     public delegate void UpdateSliderText();
     public static event UpdateSliderText updateSliderText;
 
-    public delegate void UpdateButtonText(int farmerMultiplyer);
-    public static event UpdateButtonText updateButtonText;
+
 
     public void UI_Button_BuyFarmer()
     {
@@ -44,7 +43,6 @@ public class MenuManager : MonoBehaviour
         if (updateSliderText != null)
             updateSliderText();
 
-        if (updateButtonText != null)
-            updateButtonText(farmerMultiplier);
+
     }
 }
