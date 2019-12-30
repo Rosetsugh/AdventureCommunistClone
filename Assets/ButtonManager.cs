@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour 
@@ -9,6 +10,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyFarmersButton += UnlockBuyFarmersButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
+            MenuManager.updateButtonText += UpdateButtonTextEVH;
         }
     }
 
@@ -18,6 +20,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
+            MenuManager.updateButtonText -= UpdateButtonTextEVH;
         }
     }
 
@@ -29,5 +32,10 @@ public class ButtonManager : MonoBehaviour
     private void LockBuyFarmersButtonEVH()
     {
         GetComponent<Button>().interactable = false;
+    }
+
+    private void UpdateButtonTextEVH(int farmerMultiplier)
+    {
+        GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
     }
 }
