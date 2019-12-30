@@ -44,7 +44,7 @@ public class MenuManager : MonoBehaviour
 
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
-            Destroy(unlockPanel);
+            unlockPanel.SetActive(false);
             Instantiate(communePanel, panelParent);
         }
 
