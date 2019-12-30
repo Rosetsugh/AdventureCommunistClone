@@ -18,13 +18,8 @@ public class MenuManager : MonoBehaviour
     }
 
     public Animator potatoTimer;
-    public int farmerMultiplier;
     public Menu currentMenu;
 
-    private void Start()
-    {
-        farmerMultiplier = 1;
-    }
 
     public void UI_Button_DigPotatoes()
     {
@@ -36,14 +31,15 @@ public class MenuManager : MonoBehaviour
 
     public void UI_Button_BuyFarmer(Button button)
     {
-        LevelSessionData.Singleton.numberOfPotatoes -= 10 * farmerMultiplier;
-        LevelSessionData.Singleton.numberOfComrades -= 1 * farmerMultiplier;
-        LevelSessionData.Singleton.numberOfFarmers += 1 * farmerMultiplier;
+        LevelSessionData.Singleton.numberOfPotatoes -= 10 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfFarmers += 1 * LevelSessionData.Singleton.farmerMultiplier;
 
         if (updateSliderText != null)
             updateSliderText();
 
-        if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1 * farmerMultiplier)
+        if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
+            || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
         {
             button.interactable = false;
         }
