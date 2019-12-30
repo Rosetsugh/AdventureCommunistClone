@@ -20,6 +20,7 @@ public class LevelSessionData : MonoBehaviour
     public float comradeFillSpeed = 1;
     public int numberOfFarmers = 1;
     public float farmerFillSpeed = 0.5f;
+    public int farmerMultiplier = 1;
     public int numberOfPotatoes;
     public float potatoFillSpeed = 0.5f;
 
@@ -27,11 +28,12 @@ public class LevelSessionData : MonoBehaviour
     {
         numberOfComrades = 0;
         numberOfFarmers = 1;
+        farmerMultiplier = 1;
         numberOfPotatoes = 0;
     }
 
-    public void UpdateScores()
+    public void UpdateButtonText()
     {
-
+        if(numberOfPotatoes > 10 * MenuManager.Singleton.farmerMultiplier && numberOfComrades > 1 * )
     }
 }
