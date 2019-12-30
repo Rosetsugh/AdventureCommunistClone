@@ -51,8 +51,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
                 lockBuyFarmersButton();
         }
 
-        if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * MenuManager.Singleton.farmerMultiplier 
-                && LevelSessionData.Singleton.numberOfComrades >= 1 * MenuManager.Singleton.farmerMultiplier)
+        if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && LevelSessionData.Singleton.numberOfComrades >= 1)
         {
             if (unlockBuyFarmersButton != null)
                 unlockBuyFarmersButton();
