@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class MenuManager : MonoBehaviour
 
         if (updateSliderText != null)
             updateSliderText();
+
+        if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
+            GetComponent<Button>().interactable = false;
     }
 
     public void UI_Button_OpenMenu(Menu nextMenu)
