@@ -31,6 +31,8 @@ public class MenuManager : MonoBehaviour
     public delegate void UpdateSliderText();
     public static event UpdateSliderText updateSliderText;
 
+    private bool _runOnce;
+
     public void UI_Button_BuyFarmer(Button button)
     {
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
