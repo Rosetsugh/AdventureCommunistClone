@@ -38,7 +38,6 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     {
         if (LevelSessionData.Singleton.numberOfPotatoes < 10 || LevelSessionData.Singleton.numberOfComrades < 1)
         {
-            Debug.Log("got here");
             if (lockBuyFarmersButton != null)
                 lockBuyFarmersButton();
         }
