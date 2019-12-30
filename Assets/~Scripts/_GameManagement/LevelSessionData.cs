@@ -17,9 +17,13 @@ public class LevelSessionData : MonoBehaviour
     }
 
     public int numberOfComrades;
+    public int numberOfFarmers;
+    public int numberOfPotatoes;
 
     private void Start()
     {
         numberOfComrades = 0;
+        numberOfFarmers = 0;
+        numberOfPotatoes = 0;
     }
 }
