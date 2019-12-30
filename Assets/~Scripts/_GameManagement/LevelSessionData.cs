@@ -16,5 +16,5 @@ public class LevelSessionData : MonoBehaviour
         }
     }
 
-
+    public int numberOfComrades;
 }
