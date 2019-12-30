@@ -12,6 +12,11 @@ public class ButtonManager : MonoBehaviour
             UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
             UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
+
+        if (tag == "BuyCommunes")
+        {
+
+        }
     }
 
     private void OnDisable()
@@ -21,6 +26,11 @@ public class ButtonManager : MonoBehaviour
             UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
             UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
+        }
+
+        if (tag == "BuyCommunes")
+        {
+
         }
     }
 
