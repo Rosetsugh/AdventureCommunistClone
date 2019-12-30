@@ -32,5 +32,14 @@ public class UpdatePotatoCounter : MonoBehaviour
             if (updateButtonText != null)
                 updateButtonText(multiplier);
         }
+
+        // Reset multiplier
+        else
+        {
+            LevelSessionData.Singleton.farmerMultiplier = 1;
+
+            if (updateButtonText != null)
+                updateButtonText(1);
+        }
     }
 }
