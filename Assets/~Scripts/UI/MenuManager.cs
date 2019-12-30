@@ -47,8 +47,10 @@ public class MenuManager : MonoBehaviour
         }
 
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10)
+        {
+            print("here");
             Instantiate(unlockPanel, panelParent);
-
+        }
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
             Destroy(unlockPanel);
