@@ -14,7 +14,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         {
             LevelSessionData.Singleton.numberOfComrades++;
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
-            animator.speed = LevelSessionData.Singleton.comradeFillSpeed;
+            animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.comradeFillSpeed);
             animator.SetTrigger("MoveSlider");
         }
 
@@ -22,7 +22,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         {
             LevelSessionData.Singleton.numberOfPotatoes += 2;
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
-            animator.speed = LevelSessionData.Singleton.potatoFillSpeed;
+            animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
     }
 }
