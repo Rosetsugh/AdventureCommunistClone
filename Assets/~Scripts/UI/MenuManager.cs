@@ -64,6 +64,23 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void UI_Button_BuyCommune(Button button)
+    {
+        LevelSessionData.Singleton.numberOfPotatoes -= 100 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfFarmers -= 10 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.numberOfCommnues += 1 * LevelSessionData.Singleton.farmerMultiplier;
+
+        if (updateSliderText != null)
+            updateSliderText();
+
+        if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
+            || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
+        {
+            button.interactable = false;
+        }
+    }
+
     public void UI_Button_OpenMenu(Menu nextMenu)
     {
         if (currentMenu != null)
