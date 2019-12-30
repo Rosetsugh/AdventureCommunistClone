@@ -17,4 +17,9 @@ public class LevelSessionData : MonoBehaviour
     }
 
     public int numberOfComrades;
+
+    private void Start()
+    {
+        numberOfComrades = 0;
+    }
 }
