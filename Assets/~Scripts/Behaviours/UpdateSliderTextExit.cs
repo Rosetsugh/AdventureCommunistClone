@@ -77,6 +77,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         if (countType == "Commune")
         {
+            Debug.Log("countType Commune");
             if (updateNumberOfFarmers != null)
                 updateNumberOfFarmers();
 
