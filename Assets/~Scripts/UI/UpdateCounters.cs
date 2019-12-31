@@ -16,14 +16,8 @@ public class UpdateCounters : MonoBehaviour
         if(_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
 
-        if (GetComponentInParent<SliderCountType>() != null)
-            print("Enabled" + GetComponentInParent<SliderCountType>().countType);
-
-        else
-            print("Enabled null");
-
-        //if (GetComponentInParent<SliderCountType>().countType == "CommuneFarmer")
-        //    UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
+        if (_countType == "Farmer")  
+            UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
     }
 
     private void OnDisable()
@@ -31,8 +25,8 @@ public class UpdateCounters : MonoBehaviour
         if (_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
 
-        //if (GetComponentInParent<SliderCountType>().countType == "CommuneFarmer")
-        //    UpdateSliderTextExit.updateNumberOfFarmers -= UpdateFarmerCounterEVH;
+        if (_countType == "Farmer")
+            UpdateSliderTextExit.updateNumberOfFarmers -= UpdateFarmerCounterEVH;
     }
 
     public delegate void UpdateButtonText(int farmerMultiplyer);
