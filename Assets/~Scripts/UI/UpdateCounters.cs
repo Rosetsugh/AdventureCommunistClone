@@ -3,27 +3,27 @@ using UnityEngine;
 
 public class UpdateCounters : MonoBehaviour
 {
-    //private string _countType;
+    private string _countType;
 
-    //private void Awake()
-    //{
-    //    if(GetComponentInParent<SliderCountType>() != null)
-    //        _countType = GetComponentInParent<SliderCountType>().countType;
-    //}
+    private void Awake()
+    {
+        if (GetComponentInParent<SliderCountType>() != null)
+            _countType = GetComponentInParent<SliderCountType>().countType;
+    }
 
     private void OnEnable()
     {        
-        if(GetComponentInParent<SliderCountType>().countType == null)
+        if(_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
 
-        print(GetComponentInParent<SliderCountType>().countType);
+        print("Enabled" + GetComponentInParent<SliderCountType>().countType);
         if (GetComponentInParent<SliderCountType>().countType == "CommuneFarmer")
             UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
     }
 
     private void OnDisable()
     {
-        if (GetComponentInParent<SliderCountType>().countType == null)
+        if (_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
 
         if (GetComponentInParent<SliderCountType>().countType == "CommuneFarmer")
