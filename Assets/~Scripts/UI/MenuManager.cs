@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public Animator potatoTimer;
+    public Animator communeTimer;
     public Menu currentMenu;
     public Transform panelParent;
     public GameObject unlockPanel;
@@ -26,6 +27,11 @@ public class MenuManager : MonoBehaviour
     public void UI_Button_DigPotatoes()
     {
         potatoTimer.SetTrigger("MoveSlider");
+    }
+
+    public void UI_Button_CreateCommune()
+    {
+        communeTimer.SetTrigger("MoveSlider");
     }
 
     public delegate void UpdateSliderText();
