@@ -669,6 +669,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2db4e5e36f77c544a26a00e9bb858fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &78741798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 775885263303562017, guid: 03018da16e7ff564182f45cb7e28dc6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 365193719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78741795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &78741800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,10 +4540,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfComrades: 0
   comradeFillSpeed: 1
-  potatoText: {fileID: 705843214}
-  _numberOfFarmers: 0
+  potatoSliderText: {fileID: 705843214}
+  _numberOfFarmers: 1
   farmerMultiplier: 1
-  numberOfPotatoes: 0
+  totalPotatoesText: {fileID: 78741798}
+  _numberOfPotatoes: 0
   potatoFillSpeed: 0.5
   numberOfCommnues: 0
   communeMultiplier: 0
@@ -5882,7 +5895,7 @@ PrefabInstance:
     - target: {fileID: 8346145056747279539, guid: b1e255b751d2be4408702815fe6d0ac9,
         type: 3}
       propertyPath: m_text
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8346145056747279539, guid: b1e255b751d2be4408702815fe6d0ac9,
         type: 3}
@@ -5892,7 +5905,7 @@ PrefabInstance:
     - target: {fileID: 8346145056747279539, guid: b1e255b751d2be4408702815fe6d0ac9,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1e255b751d2be4408702815fe6d0ac9, type: 3}
