@@ -14,10 +14,10 @@ public class ButtonManager : MonoBehaviour
         }
 
         if(tag == "BuyFarmers")
-            UpdatePotatoCounter.updateButtonText += UpdateBuyFarmersButtonTextEVH;
+            UpdateCounters.updateButtonText += UpdateBuyFarmersButtonTextEVH;
 
         if (tag == "BuyCommunes")
-            UpdatePotatoCounter.updateButtonText += UpdateBuyCommunesButtonTextEVH;
+            UpdateCounters.updateButtonText += UpdateBuyCommunesButtonTextEVH;
     }
 
     private void OnDisable()
@@ -30,10 +30,10 @@ public class ButtonManager : MonoBehaviour
         }
 
         if (tag == "BuyFarmers")
-            UpdatePotatoCounter.updateButtonText -= UpdateBuyFarmersButtonTextEVH;
+            UpdateCounters.updateButtonText -= UpdateBuyFarmersButtonTextEVH;
 
         if (tag == "BuyCommunes")
-            UpdatePotatoCounter.updateButtonText -= UpdateBuyCommunesButtonTextEVH;
+            UpdateCounters.updateButtonText -= UpdateBuyCommunesButtonTextEVH;
     }
 
     private void UnlockButtonEVH(string buttonType)

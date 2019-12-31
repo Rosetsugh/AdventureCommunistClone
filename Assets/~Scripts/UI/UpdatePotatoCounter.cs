@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class UpdatePotatoCounter : MonoBehaviour 
+public class UpdateCounters : MonoBehaviour 
 {
     private void OnEnable()
     {
