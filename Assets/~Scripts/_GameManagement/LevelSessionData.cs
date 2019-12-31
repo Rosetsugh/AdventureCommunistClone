@@ -49,9 +49,17 @@ public class LevelSessionData : MonoBehaviour
         communeMultiplier = 1;
     }
 
-    public void UpdateButtonText()
+    public void UpdateButtonText(string countType)
     {
-        if(numberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
-            BuyFarmerButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
+        if (countType == "Commrade")
+        {
+            if (numberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
+                BuyFarmerButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
+        }
+
+        if (countType == "Commune")
+        {
+            print("update commune button");
+        }
     }
 }
