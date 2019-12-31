@@ -7,7 +7,7 @@ public class UpdateCounters : MonoBehaviour
 
     private void Awake()
     {
-        _countType = GetComponent<SliderCountType>().countType;
+        _countType = GetComponentInParent<SliderCountType>().countType;
     }
 
     private void OnEnable()
