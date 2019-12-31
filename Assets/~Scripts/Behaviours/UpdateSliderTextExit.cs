@@ -27,6 +27,15 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
 
+        if(countType == "Commune")
+        {
+            LevelSessionData.Singleton.numberOfCommnues++;
+            animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
+            animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.communeFarmersFillSpeed);
+            animator.SetTrigger("MoveSlider");
+            LevelSessionData.Singleton.UpdateButtonText();
+        }
+
         CheckCriteriaToLaunchEvents();
     }
 
