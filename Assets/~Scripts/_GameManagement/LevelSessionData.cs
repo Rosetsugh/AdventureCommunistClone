@@ -32,7 +32,7 @@ public class LevelSessionData : MonoBehaviour
         set
         {
             _numberOfFarmers = value;
-            potatoText.text = (numberOfPotatoes * NumberOfFarmers).ToString();
+            potatoText.text = (3 * NumberOfFarmers).ToString();
         }
     }
 
