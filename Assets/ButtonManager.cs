@@ -60,9 +60,9 @@ public class ButtonManager : MonoBehaviour
     private void UpdateBuyCommunesButtonTextEVH(int communeMultiplier)
     {
         if (communeMultiplier == 0)
-            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x1 Farmer";
+            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x1 Commune";
 
         else
-            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + communeMultiplier + " Farmers";
+            GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + communeMultiplier + " Communes";
     }
 }
