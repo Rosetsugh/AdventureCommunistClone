@@ -24,9 +24,9 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    private void UnlockButtonEVH(string countType)
+    private void UnlockButtonEVH(string buttonType)
     {
-        if(tag == countType)
+        if(tag == buttonType)
             GetComponent<Button>().interactable = true;
     }
 
