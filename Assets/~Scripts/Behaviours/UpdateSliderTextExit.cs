@@ -32,7 +32,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             LevelSessionData.Singleton.numberOfFarmers += 4 * LevelSessionData.Singleton.numberOfCommnues;
             //animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.communeFarmersFillSpeed);
-            animator.SetTrigger("MoveSlider");
+            //animator.SetTrigger("MoveSlider");
             LevelSessionData.Singleton.UpdateButtonText("Commune");
         }
 
