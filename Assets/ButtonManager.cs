@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour
         if (tag != "Untagged")
         {
             UpdateSliderTextExit.unlockBuyButton += UnlockButtonEVH;
-            UpdateSliderTextExit.lockBuyButton += LockButton;
+            UpdateSliderTextExit.lockBuyButton += LockButtonEVH;
             UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
     }
@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
         if (tag != "Untagged")
         {
             UpdateSliderTextExit.unlockBuyButton -= UnlockButtonEVH;
-            UpdateSliderTextExit.lockBuyButton -= LockButton;
+            UpdateSliderTextExit.lockBuyButton -= LockButtonEVH;
             UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
         }
     }
@@ -30,7 +30,7 @@ public class ButtonManager : MonoBehaviour
             GetComponent<Button>().interactable = true;
     }
 
-    private void LockButton(string buttonType)
+    private void LockButtonEVH(string buttonType)
     {
         if (tag == buttonType)
             GetComponent<Button>().interactable = false;
