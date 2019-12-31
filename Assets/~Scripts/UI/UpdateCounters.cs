@@ -7,12 +7,13 @@ public class UpdateCounters : MonoBehaviour
 
     private void Awake()
     {
-        _countType = GetComponentInParent<SliderCountType>().countType;
+        if(GetComponentInParent<SliderCountType>() != null)
+            _countType = GetComponentInParent<SliderCountType>().countType;
     }
 
     private void OnEnable()
     {        
-        if(_countType == "Potato")
+        if(_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
 
         if (_countType == "CommuneFarmer")
@@ -21,7 +22,7 @@ public class UpdateCounters : MonoBehaviour
 
     private void OnDisable()
     {
-        if (_countType == "Potato")
+        if (_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
 
         if (_countType == "CommuneFarmer")
