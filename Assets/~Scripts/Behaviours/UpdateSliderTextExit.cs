@@ -21,7 +21,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         if (countType == "Potato")
         {
-            LevelSessionData.Singleton.numberOfPotatoes += 3 * LevelSessionData.Singleton.NumberOfFarmers;
+            LevelSessionData.Singleton.NumberOfPotatoes += 3 * LevelSessionData.Singleton.NumberOfFarmers;
             //animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
             animator.GetComponentInChildren<TextMeshProUGUI>().text = (3 * LevelSessionData.Singleton.NumberOfFarmers).ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
@@ -60,14 +60,14 @@ public class UpdateSliderTextExit : StateMachineBehaviour
                 updateNumberOfPotatoes();
 
 
-            if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
+            if (LevelSessionData.Singleton.NumberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
                 || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (lockBuyButton != null)
                     lockBuyButton("BuyFarmers");
             }
 
-            if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier
+            if (LevelSessionData.Singleton.NumberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier
                 && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (unlockBuyButton != null)

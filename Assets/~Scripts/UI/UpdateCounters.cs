@@ -34,9 +34,9 @@ public class UpdateCounters : MonoBehaviour
 
     private void UpdatePotatoCounterEVH()
     {
-        GetComponent<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
+        GetComponent<TextMeshProUGUI>().text = LevelSessionData.Singleton.NumberOfPotatoes.ToString();
 
-        var multiplier = LevelSessionData.Singleton.numberOfPotatoes / 10;
+        var multiplier = LevelSessionData.Singleton.NumberOfPotatoes / 10;
 
         if (multiplier < 1)
             return;

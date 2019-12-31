@@ -39,7 +39,7 @@ public class LevelSessionData : MonoBehaviour
     //public float farmerFillSpeed = 0.5f;
     public int farmerMultiplier = 1;
 
-    public int numberOfPotatoes;
+    public int NumberOfPotatoes;
     public float potatoFillSpeed = 0.5f;
 
     public int numberOfCommnues;
@@ -57,7 +57,7 @@ public class LevelSessionData : MonoBehaviour
         NumberOfFarmers = 1;
         farmerMultiplier = 1;
 
-        numberOfPotatoes = 0;
+        NumberOfPotatoes = 0;
 
         numberOfCommnues = 1;
         communeMultiplier = 1;
@@ -67,7 +67,7 @@ public class LevelSessionData : MonoBehaviour
     {
         if (countType == "Commrade")
         {
-            if (numberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
+            if (NumberOfPotatoes > 10 * farmerMultiplier && numberOfComrades > 1 * farmerMultiplier)
                 BuyFarmerButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy x" + farmerMultiplier + " Farmers";
         }
 
