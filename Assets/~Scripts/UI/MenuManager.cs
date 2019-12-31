@@ -37,7 +37,6 @@ public class MenuManager : MonoBehaviour
     {
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && !_runOnce)
         {
-            print("here");
             unlockPanel.SetActive(true);
             _runOnce = true;
         }
