@@ -1,16 +1,18 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class UpdateCounters : MonoBehaviour 
+public class UpdateCounters : MonoBehaviour
 {
     private void OnEnable()
     {
         UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
+        UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
     }
 
     private void OnDisable()
     {
         UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
+        UpdateSliderTextExit.updateNumberOfFarmers -= UpdateFarmerCounterEVH;
     }
 
     public delegate void UpdateButtonText(int farmerMultiplyer);
@@ -41,5 +43,10 @@ public class UpdateCounters : MonoBehaviour
             if (updateButtonText != null)
                 updateButtonText(LevelSessionData.Singleton.numberOfComrades);
         }
+    }
+
+    private void UpdateFarmerCounterEVH()
+    {
+        GetComponent<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
     }
 }
