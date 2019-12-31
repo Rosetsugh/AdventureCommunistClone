@@ -16,7 +16,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.comradeFillSpeed);
             animator.SetTrigger("MoveSlider");
-            LevelSessionData.Singleton.UpdateButtonText();
+            LevelSessionData.Singleton.UpdateButtonText("Comrade");
         }
 
         if (countType == "Potato")
@@ -33,7 +33,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.communeFarmersFillSpeed);
             animator.SetTrigger("MoveSlider");
-            LevelSessionData.Singleton.UpdateButtonText();
+            LevelSessionData.Singleton.UpdateButtonText("Commune");
         }
 
         CheckCriteriaToLaunchEvents();
