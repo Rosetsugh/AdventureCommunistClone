@@ -23,6 +23,8 @@ public class LevelSessionData : MonoBehaviour
 
     public TextMeshProUGUI potatoText;
 
+    [SerializeField, CustomProperty("NumberOfFarmers")]
+    private int _numberOfFarmers;
 
     public int NumberOfFarmers
     {
