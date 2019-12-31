@@ -2118,6 +2118,24 @@ Transform:
   m_Father: {fileID: 70048689}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &524651013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7233492471655933931, guid: b1e255b751d2be4408702815fe6d0ac9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1833349472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &524651017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524651013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2db4e5e36f77c544a26a00e9bb858fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &559250844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,6 +2926,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &705843214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8346145056747279539, guid: b1e255b751d2be4408702815fe6d0ac9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065961910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &718728464 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 258060539770506127, guid: 3bcfdd2c082c1a248bab7b4105813cca,
@@ -4498,7 +4528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfComrades: 0
   comradeFillSpeed: 1
-  numberOfFarmers: 1
+  potatoText: {fileID: 705843214}
+  _numberOfFarmers: 0
   farmerMultiplier: 1
   numberOfPotatoes: 0
   potatoFillSpeed: 0.5
