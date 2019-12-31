@@ -77,8 +77,8 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         if (countType == "Commune")
         {
-            if (updateNumberOfPotatoes != null)
-                updateNumberOfPotatoes();
+            if (updateNumberOfFarmers != null)
+                updateNumberOfFarmers();
 
             //if (unlockBuyButton != null)
             //    unlockBuyButton(countType);
