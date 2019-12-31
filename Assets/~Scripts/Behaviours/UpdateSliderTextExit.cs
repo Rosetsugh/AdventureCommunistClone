@@ -36,7 +36,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             LevelSessionData.Singleton.UpdateButtonText("Commune");
         }
 
-        CheckCriteriaToLaunchEvents();
+        CheckCriteriaToLaunchEvents(countType);
     }
 
     public delegate void UnlockBuyButton();
@@ -48,21 +48,31 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public delegate void UpdateNumberOfPotatoes();
     public static event UpdateNumberOfPotatoes updateNumberOfPotatoes;
 
-    private void CheckCriteriaToLaunchEvents()
+    private void CheckCriteriaToLaunchEvents(string countType)
     {
-        // Update the text of the main potato counter
-        if (updateNumberOfPotatoes != null)
-            updateNumberOfPotatoes();
-
-        if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier 
-            || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
+        if (countType == "Potato")
         {
-            if (lockBuyButton != null)
-                lockBuyButton();
+            // Update the text of the main potato counter
+            if (updateNumberOfPotatoes != null)
+                updateNumberOfPotatoes();
+
+
+            if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier
+                || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
+            {
+                if (lockBuyButton != null)
+                    lockBuyButton();
+            }
+
+            if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier
+                && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
+            {
+                if (unlockBuyButton != null)
+                    unlockBuyButton();
+            }
         }
 
-        if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier 
-            && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
+        if(countType == "Commune")
         {
             if (unlockBuyButton != null)
                 unlockBuyButton();
