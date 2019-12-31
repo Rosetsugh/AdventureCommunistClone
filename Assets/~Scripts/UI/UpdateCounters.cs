@@ -3,16 +3,28 @@ using UnityEngine;
 
 public class UpdateCounters : MonoBehaviour
 {
-    private void OnEnable()
+    private string _countType;
+
+    private void Awake()
     {
-        UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
-        UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
+        _countType = GetComponent<SliderCountType>().countType;
+    }
+
+    private void OnEnable()
+    {        
+        if(_countType == "Potato")
+            UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
+
+        if (_countType == "CommuneFarmer")
+            UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
     }
 
     private void OnDisable()
     {
-        UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
-        UpdateSliderTextExit.updateNumberOfFarmers -= UpdateFarmerCounterEVH;
+        if (_countType == "Potato")
+            UpdateSliderTextExit.updateNumberOfPotatoes -= UpdatePotatoCounterEVH;
+        if (_countType == "CommuneFarmer")
+            UpdateSliderTextExit.updateNumberOfFarmers -= UpdateFarmerCounterEVH;
     }
 
     public delegate void UpdateButtonText(int farmerMultiplyer);
