@@ -6,31 +6,21 @@ public class ButtonManager : MonoBehaviour
 {
     private void OnEnable()
     {
-        if (tag == "BuyFarmers")
+        if (tag != "Untagged")
         {
             UpdateSliderTextExit.unlockBuyButton += UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyButton += LockButton;
             UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
-
-        if (tag == "BuyCommunes")
-        {
-            
-        }
     }
 
     private void OnDisable()
     {
-        if (tag == "BuyFarmers")
+        if (tag != "Untagged")
         {
             UpdateSliderTextExit.unlockBuyButton -= UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyButton -= LockButton;
             UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
-        }
-
-        if (tag == "BuyCommunes")
-        {
-
         }
     }
 
