@@ -39,8 +39,8 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         CheckCriteriaToLaunchEvents();
     }
 
-    public delegate void UnlockButton();
-    public static event UnlockButton unlockBuyButton;
+    public delegate void UnlockBuyButton();
+    public static event UnlockBuyButton unlockBuyButton;
 
     public delegate void LockButton();
     public static event LockButton lockBuyButton;
