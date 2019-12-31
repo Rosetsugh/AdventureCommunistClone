@@ -48,6 +48,9 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public delegate void UpdateNumberOfPotatoes();
     public static event UpdateNumberOfPotatoes updateNumberOfPotatoes;
 
+    public delegate void UpdateNumberOfFarmers();
+    public static event UpdateNumberOfFarmers updateNumberOfFarmers;
+
     private void CheckCriteriaToLaunchEvents(string countType)
     {
         if (countType == "Potato")
@@ -72,10 +75,13 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             }
         }
 
-        //if(countType == "Commune")
-        //{
-        //    if (unlockBuyButton != null)
-        //        unlockBuyButton(countType);
-        //}
+        if (countType == "Commune")
+        {
+            if (updateNumberOfPotatoes != null)
+                updateNumberOfPotatoes();
+
+            //if (unlockBuyButton != null)
+            //    unlockBuyButton(countType);
+        }
     }
 }
