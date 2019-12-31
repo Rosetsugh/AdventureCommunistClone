@@ -47,7 +47,6 @@ public class UpdateCounters : MonoBehaviour
 
     private void UpdateFarmerCounterEVH()
     {
-        print("UpdateFarmerCounterEVH");
         GetComponent<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfFarmers.ToString();
     }
 }
