@@ -56,7 +56,7 @@ public class MenuManager : MonoBehaviour
 
         LevelSessionData.Singleton.numberOfPotatoes -= 10 * LevelSessionData.Singleton.farmerMultiplier;
         LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.farmerMultiplier;
-        LevelSessionData.Singleton.numberOfFarmers += 1 * LevelSessionData.Singleton.farmerMultiplier;
+        LevelSessionData.Singleton.NumberOfFarmers += 1 * LevelSessionData.Singleton.farmerMultiplier;
 
         if (updateSliderText != null)
             updateSliderText();
@@ -72,7 +72,7 @@ public class MenuManager : MonoBehaviour
     {
         LevelSessionData.Singleton.numberOfPotatoes -= 100 * LevelSessionData.Singleton.communeMultiplier;
         LevelSessionData.Singleton.numberOfComrades -= 1 * LevelSessionData.Singleton.communeMultiplier;
-        LevelSessionData.Singleton.numberOfFarmers -= 10 * LevelSessionData.Singleton.communeMultiplier;
+        LevelSessionData.Singleton.NumberOfFarmers -= 10 * LevelSessionData.Singleton.communeMultiplier;
         LevelSessionData.Singleton.numberOfCommnues += 1 * LevelSessionData.Singleton.communeMultiplier;
 
         if (updateSliderText != null)
@@ -80,7 +80,7 @@ public class MenuManager : MonoBehaviour
 
         if (LevelSessionData.Singleton.numberOfPotatoes < 100 * LevelSessionData.Singleton.communeMultiplier
             || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.communeMultiplier
-            || LevelSessionData.Singleton.numberOfFarmers < 10 * LevelSessionData.Singleton.communeMultiplier)
+            || LevelSessionData.Singleton.NumberOfFarmers < 10 * LevelSessionData.Singleton.communeMultiplier)
         {
             button.interactable = false;
         }

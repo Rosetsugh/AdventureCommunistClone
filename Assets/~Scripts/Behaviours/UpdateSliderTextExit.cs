@@ -21,15 +21,15 @@ public class UpdateSliderTextExit : StateMachineBehaviour
 
         if (countType == "Potato")
         {
-            LevelSessionData.Singleton.numberOfPotatoes += 3 * LevelSessionData.Singleton.numberOfFarmers;
+            LevelSessionData.Singleton.numberOfPotatoes += 3 * LevelSessionData.Singleton.NumberOfFarmers;
             //animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfPotatoes.ToString();
-            animator.GetComponentInChildren<TextMeshProUGUI>().text = (3 * LevelSessionData.Singleton.numberOfFarmers).ToString();
+            animator.GetComponentInChildren<TextMeshProUGUI>().text = (3 * LevelSessionData.Singleton.NumberOfFarmers).ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
 
         if(countType == "CommuneFarmer")
         {
-            LevelSessionData.Singleton.numberOfFarmers += 4 * LevelSessionData.Singleton.numberOfCommnues;
+            LevelSessionData.Singleton.NumberOfFarmers += 4 * LevelSessionData.Singleton.numberOfCommnues;
             //animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.communeFarmersFillSpeed);
             //animator.SetTrigger("MoveSlider");

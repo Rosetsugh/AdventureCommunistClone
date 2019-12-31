@@ -32,10 +32,10 @@ public class SliderCountType : MonoBehaviour
             GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfComrades.ToString();
 
         if (countType == "Farmer")
-            GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfFarmers.ToString();
+            GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.NumberOfFarmers.ToString();
 
         if (countType == "Potato")
-            GetComponentInChildren<TextMeshProUGUI>().text = (LevelSessionData.Singleton.numberOfFarmers * 3).ToString();
+            GetComponentInChildren<TextMeshProUGUI>().text = (LevelSessionData.Singleton.NumberOfFarmers * 3).ToString();
 
         if (countType == "Commune")
             GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
