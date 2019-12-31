@@ -30,9 +30,9 @@ public class ButtonManager : MonoBehaviour
             GetComponent<Button>().interactable = true;
     }
 
-    private void LockButton(string countType)
+    private void LockButton(string buttonType)
     {
-        if (tag == countType)
+        if (tag == buttonType)
             GetComponent<Button>().interactable = false;
     }
 
