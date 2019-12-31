@@ -43,7 +43,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public static event UnlockButton unlockBuyButton;
 
     public delegate void LockButton();
-    public static event LockButton lockBuyFarmersButton;
+    public static event LockButton lockBuyButton;
 
     public delegate void UpdateNumberOfPotatoes();
     public static event UpdateNumberOfPotatoes updateNumberOfPotatoes;
@@ -57,8 +57,8 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         if (LevelSessionData.Singleton.numberOfPotatoes < 10 * LevelSessionData.Singleton.farmerMultiplier 
             || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
         {
-            if (lockBuyFarmersButton != null)
-                lockBuyFarmersButton();
+            if (lockBuyButton != null)
+                lockBuyButton();
         }
 
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier 
