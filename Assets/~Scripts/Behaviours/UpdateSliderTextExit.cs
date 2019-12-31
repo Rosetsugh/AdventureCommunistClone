@@ -61,14 +61,14 @@ public class UpdateSliderTextExit : StateMachineBehaviour
                 || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (lockBuyButton != null)
-                    lockBuyButton(countType);
+                    lockBuyButton("BuyFarmers");
             }
 
             if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier
                 && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (unlockBuyButton != null)
-                    unlockBuyButton(countType);
+                    unlockBuyButton("BuyFarmers");
             }
         }
 
