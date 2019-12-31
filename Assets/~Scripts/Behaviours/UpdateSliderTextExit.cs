@@ -42,8 +42,8 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     public delegate void UnlockBuyButton();
     public static event UnlockBuyButton unlockBuyButton;
 
-    public delegate void LockButton();
-    public static event LockButton lockBuyButton;
+    public delegate void LockBuyButton();
+    public static event LockBuyButton lockBuyButton;
 
     public delegate void UpdateNumberOfPotatoes();
     public static event UpdateNumberOfPotatoes updateNumberOfPotatoes;
