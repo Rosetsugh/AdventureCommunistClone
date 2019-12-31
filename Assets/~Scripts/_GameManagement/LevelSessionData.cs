@@ -45,7 +45,7 @@ public class LevelSessionData : MonoBehaviour
 
         numberOfPotatoes = 0;
 
-        numberOfCommnues = 0;
+        numberOfCommnues = 1;
         communeMultiplier = 1;
     }
 
