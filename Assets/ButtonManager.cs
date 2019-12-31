@@ -24,12 +24,12 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    private void UnlockButtonEVH()
+    private void UnlockButtonEVH(string countType)
     {
         GetComponent<Button>().interactable = true;
     }
 
-    private void LockButton()
+    private void LockButton(string countType)
     {
         GetComponent<Button>().interactable = false;
     }
