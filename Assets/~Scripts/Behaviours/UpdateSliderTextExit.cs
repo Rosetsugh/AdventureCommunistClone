@@ -39,10 +39,10 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         CheckCriteriaToLaunchEvents(countType);
     }
 
-    public delegate void UnlockBuyButton();
+    public delegate void UnlockBuyButton(string countType);
     public static event UnlockBuyButton unlockBuyButton;
 
-    public delegate void LockBuyButton();
+    public delegate void LockBuyButton(string countType);
     public static event LockBuyButton lockBuyButton;
 
     public delegate void UpdateNumberOfPotatoes();
@@ -61,21 +61,21 @@ public class UpdateSliderTextExit : StateMachineBehaviour
                 || LevelSessionData.Singleton.numberOfComrades < 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (lockBuyButton != null)
-                    lockBuyButton();
+                    lockBuyButton(countType);
             }
 
             if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier
                 && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
             {
                 if (unlockBuyButton != null)
-                    unlockBuyButton();
+                    unlockBuyButton(countType);
             }
         }
 
         if(countType == "Commune")
         {
             if (unlockBuyButton != null)
-                unlockBuyButton();
+                unlockBuyButton(countType);
         }
     }
 }
