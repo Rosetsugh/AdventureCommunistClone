@@ -26,6 +26,9 @@ public class SliderCountType : MonoBehaviour
 
         if (countType == "Commune")
             GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
+
+        if (countType == "CommuneFarmers")
+            GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
     }
 
     [StringDropdown("Comrade", "Farmer", "Potato", "Commune", "CommuneFarmer")]
