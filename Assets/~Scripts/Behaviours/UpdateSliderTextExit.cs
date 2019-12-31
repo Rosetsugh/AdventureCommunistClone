@@ -75,9 +75,11 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             }
         }
 
-        Debug.Log("got here");
+        
         if (countType == "CommuneFarmer")
         {
+            Debug.Log("got here");
+
             if (updateNumberOfFarmers != null)
                 updateNumberOfFarmers();
 
