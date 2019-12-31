@@ -8,14 +8,14 @@ public class ButtonManager : MonoBehaviour
     {
         if (tag == "BuyFarmers")
         {
-            UpdateSliderTextExit.unlockBuyFarmersButton += UnlockButtonEVH;
+            UpdateSliderTextExit.unlockBuyButton += UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton += LockButton;
             UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
 
         if (tag == "BuyCommunes")
         {
-
+            )
         }
     }
 
@@ -23,7 +23,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (tag == "BuyFarmers")
         {
-            UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockButtonEVH;
+            UpdateSliderTextExit.unlockBuyButton -= UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton -= LockButton;
             UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
         }

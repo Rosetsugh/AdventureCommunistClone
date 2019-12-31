@@ -40,7 +40,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
     }
 
     public delegate void UnlockButton();
-    public static event UnlockButton unlockBuyFarmersButton;
+    public static event UnlockButton unlockBuyButton;
 
     public delegate void LockButton();
     public static event LockButton lockBuyFarmersButton;
@@ -64,8 +64,8 @@ public class UpdateSliderTextExit : StateMachineBehaviour
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10 * LevelSessionData.Singleton.farmerMultiplier 
             && LevelSessionData.Singleton.numberOfComrades >= 1 * LevelSessionData.Singleton.farmerMultiplier)
         {
-            if (unlockBuyFarmersButton != null)
-                unlockBuyFarmersButton();
+            if (unlockBuyButton != null)
+                unlockBuyButton();
         }
     }
 }
