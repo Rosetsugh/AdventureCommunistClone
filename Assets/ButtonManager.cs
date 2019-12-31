@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour
 
         if (tag == "BuyCommunes")
         {
-            )
+            
         }
     }
 
