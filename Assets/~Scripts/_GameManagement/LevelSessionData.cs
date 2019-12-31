@@ -21,7 +21,7 @@ public class LevelSessionData : MonoBehaviour
     public int numberOfComrades;
     public float comradeFillSpeed = 1;
 
-    public TextMeshProUGUI potatoText;
+    public TextMeshProUGUI potatoSliderText;
 
     [SerializeField, CustomProperty("NumberOfFarmers")]
     private int _numberOfFarmers;
@@ -32,7 +32,7 @@ public class LevelSessionData : MonoBehaviour
         set
         {
             _numberOfFarmers = value;
-            potatoText.text = (3 * NumberOfFarmers).ToString();
+            potatoSliderText.text = (3 * NumberOfFarmers).ToString();
         }
     }
 
