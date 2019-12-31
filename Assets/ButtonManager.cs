@@ -26,12 +26,14 @@ public class ButtonManager : MonoBehaviour
 
     private void UnlockButtonEVH(string countType)
     {
-        GetComponent<Button>().interactable = true;
+        if(tag == countType)
+            GetComponent<Button>().interactable = true;
     }
 
     private void LockButton(string countType)
     {
-        GetComponent<Button>().interactable = false;
+        if (tag == countType)
+            GetComponent<Button>().interactable = false;
     }
 
     private void UpdateButtonTextEVH(int farmerMultiplier)
