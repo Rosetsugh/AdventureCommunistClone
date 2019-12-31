@@ -16,6 +16,7 @@ public class UpdateCounters : MonoBehaviour
         if(_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
 
+        print(_countType);
         if (_countType == "CommuneFarmer")
             UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
     }
