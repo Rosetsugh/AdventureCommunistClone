@@ -21,7 +21,6 @@ public class MenuManager : MonoBehaviour
     public Menu currentMenu;
     public Transform panelParent;
     public GameObject unlockPanel;
-    public GameObject unlockPanelInstance;
     public GameObject communePanel;
 
     public void UI_Button_DigPotatoes()
