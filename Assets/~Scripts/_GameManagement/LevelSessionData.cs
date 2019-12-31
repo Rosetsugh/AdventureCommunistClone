@@ -22,7 +22,7 @@ public class LevelSessionData : MonoBehaviour
     public float comradeFillSpeed = 1;
 
     public int numberOfFarmers = 1;
-    public float farmerFillSpeed = 0.5f;
+    //public float farmerFillSpeed = 0.5f;
     public int farmerMultiplier = 1;
 
     public int numberOfPotatoes;
@@ -30,6 +30,9 @@ public class LevelSessionData : MonoBehaviour
 
     public int numberOfCommnues;
     public int communeMultiplier;
+
+    public int numberOfCommuneFarmers;
+    public float communeFarmersFillSpeed = 0.5f;
 
     public Button BuyFarmerButton;
 
