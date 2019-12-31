@@ -27,7 +27,7 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             animator.SetFloat("SliderSpeed", LevelSessionData.Singleton.potatoFillSpeed);
         }
 
-        if(countType == "Commune")
+        if(countType == "CommuneFarmer")
         {
             LevelSessionData.Singleton.numberOfFarmers += 4 * LevelSessionData.Singleton.numberOfCommnues;
             //animator.GetComponentInChildren<TextMeshProUGUI>().text = LevelSessionData.Singleton.numberOfCommnues.ToString();
@@ -75,9 +75,9 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             }
         }
 
-        if (countType == "Commune")
+        if (countType == "CommuneFarmer")
         {
-            Debug.Log("countType Commune");
+            Debug.Log("countType CommuneFarmer");
             if (updateNumberOfFarmers != null)
                 updateNumberOfFarmers();
 
