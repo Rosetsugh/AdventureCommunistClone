@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (tag == "BuyFarmers")
         {
-            UpdateSliderTextExit.unlockBuyFarmersButton += UnlockBuyFarmersButtonEVH;
+            UpdateSliderTextExit.unlockBuyFarmersButton += UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton += LockBuyFarmersButtonEVH;
             UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
         }
@@ -23,7 +23,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (tag == "BuyFarmers")
         {
-            UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockBuyFarmersButtonEVH;
+            UpdateSliderTextExit.unlockBuyFarmersButton -= UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyFarmersButton -= LockBuyFarmersButtonEVH;
             UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
         }
@@ -34,7 +34,7 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    private void UnlockBuyFarmersButtonEVH()
+    private void UnlockButtonEVH()
     {
         GetComponent<Button>().interactable = true;
     }
