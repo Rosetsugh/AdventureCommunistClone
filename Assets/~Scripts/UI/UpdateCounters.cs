@@ -16,11 +16,11 @@ public class UpdateCounters : MonoBehaviour
         if(_countType == null)
             UpdateSliderTextExit.updateNumberOfPotatoes += UpdatePotatoCounterEVH;
 
-        if(GetComponentInParent<SliderCountType>() != null)
+        if (GetComponentInParent<SliderCountType>() != null)
             print("Enabled" + GetComponentInParent<SliderCountType>().countType);
 
         else
-            print("Enabled null")
+            print("Enabled null");
 
         //if (GetComponentInParent<SliderCountType>().countType == "CommuneFarmer")
         //    UpdateSliderTextExit.updateNumberOfFarmers += UpdateFarmerCounterEVH;
