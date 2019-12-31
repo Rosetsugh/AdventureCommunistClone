@@ -72,10 +72,10 @@ public class UpdateSliderTextExit : StateMachineBehaviour
             }
         }
 
-        if(countType == "Commune")
-        {
-            if (unlockBuyButton != null)
-                unlockBuyButton(countType);
-        }
+        //if(countType == "Commune")
+        //{
+        //    if (unlockBuyButton != null)
+        //        unlockBuyButton(countType);
+        //}
     }
 }
