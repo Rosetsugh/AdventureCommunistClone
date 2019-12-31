@@ -28,8 +28,12 @@ public class LevelSessionData : MonoBehaviour
 
     public int NumberOfFarmers
     {
-        get { return value}
-        set ();
+        get { return _numberOfFarmers; }
+        set
+        {
+            _numberOfFarmers = value;
+            potatoText.text = numberOfPotatoes.ToString();
+        }
     }
 
     //public float farmerFillSpeed = 0.5f;
