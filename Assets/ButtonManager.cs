@@ -16,7 +16,8 @@ public class ButtonManager : MonoBehaviour
         if(tag == "BuyFarmers")
             UpdatePotatoCounter.updateButtonText += UpdateBuyFarmersButtonTextEVH;
 
-        if(tag == "BuyCommunes")
+        if (tag == "BuyCommunes")
+            UpdatePotatoCounter.updateButtonText += UpdateBuyCommunesButtonTextEVH;
     }
 
     private void OnDisable()
@@ -30,6 +31,9 @@ public class ButtonManager : MonoBehaviour
 
         if (tag == "BuyFarmers")
             UpdatePotatoCounter.updateButtonText -= UpdateBuyFarmersButtonTextEVH;
+
+        if (tag == "BuyCommunes")
+            UpdatePotatoCounter.updateButtonText -= UpdateBuyCommunesButtonTextEVH;
     }
 
     private void UnlockButtonEVH(string buttonType)
