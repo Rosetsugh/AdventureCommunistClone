@@ -39,14 +39,14 @@ public class MenuManager : MonoBehaviour
         if (LevelSessionData.Singleton.numberOfPotatoes >= 10 && !_runOnce)
         {
             print("here");
-            unlockPanelInstance = Instantiate(unlockPanel, panelParent);
+            unlockPanel.SetActive(true);
             _runOnce = true;
         }
 
         // TODO: Change to numberOfFarmers
         if (LevelSessionData.Singleton.numberOfPotatoes >= 25)
         {
-            unlockPanelInstance.SetActive(false);
+            unlockPanel.SetActive(false);
             Instantiate(communePanel, panelParent);
         }
 
