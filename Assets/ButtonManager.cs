@@ -10,7 +10,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyButton += UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyButton += LockButtonEVH;
-            UpdatePotatoCounter.updateButtonText += UpdateButtonTextEVH;
+            UpdatePotatoCounter.updateButtonText += UpdateBuyFarmersButtonTextEVH;
         }
     }
 
@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
         {
             UpdateSliderTextExit.unlockBuyButton -= UnlockButtonEVH;
             UpdateSliderTextExit.lockBuyButton -= LockButtonEVH;
-            UpdatePotatoCounter.updateButtonText -= UpdateButtonTextEVH;
+            UpdatePotatoCounter.updateButtonText -= UpdateBuyFarmersButtonTextEVH;
         }
     }
 
@@ -36,7 +36,7 @@ public class ButtonManager : MonoBehaviour
             GetComponent<Button>().interactable = false;
     }
 
-    private void UpdateButtonTextEVH(int farmerMultiplier)
+    private void UpdateBuyFarmersButtonTextEVH(int farmerMultiplier)
     {
         if(farmerMultiplier == 0)
             GetComponentInChildren<TextMeshProUGUI>().text = "Buy x1 Farmer";
