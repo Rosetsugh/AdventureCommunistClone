@@ -25,7 +25,6 @@ public class LevelSessionData : MonoBehaviour
 
     [SerializeField, CustomProperty("NumberOfFarmers")]
     private int _numberOfFarmers;
-
     public int NumberOfFarmers
     {
         get { return _numberOfFarmers; }
@@ -39,7 +38,19 @@ public class LevelSessionData : MonoBehaviour
     //public float farmerFillSpeed = 0.5f;
     public int farmerMultiplier = 1;
 
-    public int NumberOfPotatoes;
+    public TextMeshProUGUI totalPotatoesText;
+
+    [SerializeField, CustomProperty("NumberOfFarmers")]
+    private int _numberOfPotatoes;
+    public int NumberOfPotatoes
+    {
+        get { return _numberOfPotatoes; }
+        set
+        {
+            _numberOfPotatoes = value;
+            totalPotatoesText.text = NumberOfPotatoes.ToString();
+        }
+    }
     public float potatoFillSpeed = 0.5f;
 
     public int numberOfCommnues;
