@@ -54,7 +54,7 @@ public class LevelSessionData : MonoBehaviour
     {
         numberOfComrades = 0;
 
-        numberOfFarmers = 1;
+        NumberOfFarmers = 1;
         farmerMultiplier = 1;
 
         numberOfPotatoes = 0;
